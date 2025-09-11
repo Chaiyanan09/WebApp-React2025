@@ -1,0 +1,118 @@
+/* 🎨 Theme Variables */
+:root {
+  --accent: #7c3aed;   /* purple */
+  --accent-2: #06b6d4; /* cyan */
+  --text: #0f172a;
+  --muted: #64748b;
+  --bg: #f9fafb;
+  --radius: 18px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 🏠 Container */
+.list-container {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 🔍 Search */
+.search-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  display: block;
+}
+.search-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: none;
+  outline: none;
+  background: linear-gradient(145deg, #fff, #f3f4f6);
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
+}
+.search-input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.3),
+              0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* 📚 Book Grid */
+.book-grid {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* 🎴 Book Card */
+.book-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px;
+}
+.book-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 26px rgba(124, 58, 237, 0.35),
+              0 6px 18px rgba(6, 182, 212, 0.25);
+}
+
+/* 📷 Book Image */
+.book-figure {
+  margin: 0;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.book-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box,
+              linear-gradient(135deg, var(--accent), var(--accent-2)) border-box;
+}
+
+/* ✍️ Text */
+.book-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 12px 0 6px;
+  line-height: 1.4;
+  color: var(--text);
+}
+.book-author {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 10px;
+}
+.book-price {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: transparent;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* 🛑 Empty state */
+.empty-state {
+  margin-top: 20px;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 1rem;
+}
